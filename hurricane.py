@@ -19,7 +19,7 @@ damages = ['Damages not recorded', '100M', 'Damages not recorded', '40M', '27.9M
 # deaths for each hurricane
 deaths = [90,4000,16,3103,179,184,408,682,5,1023,43,319,688,259,37,11,2068,269,318,107,65,19325,51,124,17,1836,125,87,45,133,603,138,3057,74]
 
-# 2 yes
+# 2 works
 # Update Recorded Damages
 conversion = {"M": 1000000,
               "B": 1000000000}
@@ -38,7 +38,7 @@ def updated_damages(damages):
 updated_damages = updated_damages(damages)
 # print(updated_damages)
 
-# 3 yes
+# 3 works -- a little confused by [names[i]]
 # Create a Table
 def hurricane_table(names, months, years, max_sustained_winds, areas_affected, updated_damages, deaths):
   hurricanes = {}
@@ -50,7 +50,7 @@ def hurricane_table(names, months, years, max_sustained_winds, areas_affected, u
 hurricane_dictionary = hurricane_table(names, months, years, max_sustained_winds, areas_affected, updated_damages, deaths)
 # print(hurricane_dictionary)
 
-# 4 yes
+# 4 works -- don't understand {value["Year"]:value}, why isn't it key[]:value?
 # Organizing by Year
 def hurricanes_by_year(hurricane_dictionary):
   hurricane_year = {}
@@ -60,7 +60,7 @@ def hurricanes_by_year(hurricane_dictionary):
 hurricanes_by_year = hurricanes_by_year(hurricane_dictionary)
 # print(hurricanes_by_year)
 
-# 5 yes
+# 5 works -- area_count[area], why not just area_count?
 # Counting Damaged Areas
 def area_frequency(hurricane_dictionary):
   area_count = {}
@@ -76,7 +76,7 @@ def area_frequency(hurricane_dictionary):
 affected_areas = area_frequency(hurricane_dictionary)
 # print(affected_areas)
 
-# 6 yes
+# 6 works -- got solution online
 # Calculating Maximum Hurricane Count
 def area_most_affected(affected_areas):
   max_value = max(affected_areas.values())
@@ -86,7 +86,7 @@ def area_most_affected(affected_areas):
 most_affected = area_most_affected(affected_areas)
 # print(most_affected)
 
-# 7 yes
+# 7 works -- what if there are two with the same deadliness?
 # Calculating the Deadliest Hurricane
 def death_frequency(names, deaths):
   names_deaths = list(zip(names, deaths))
@@ -102,7 +102,7 @@ def death_frequency(names, deaths):
 deadliest_hurricane = death_frequency(names, deaths)
 # print(deadliest_hurricane)
 
-# 8 no codecademy solution doesn't work?!?
+# 8 works -- don't quite understand the logic 
 # Rating Hurricanes by Mortality
 # categorize hurricanes in new dictionary with mortality severity as key
 def categorize_by_mortality(hurricane_dictionary):
@@ -132,10 +132,10 @@ def categorize_by_mortality(hurricane_dictionary):
 hurricanes_by_mortality = categorize_by_mortality(hurricane_dictionary)
 # print(hurricanes_by_mortality[5])
 
-# 9 no
+# 9 works -- don't understand the logic
 # Calculating Hurricane Maximum Damage
 def highest_damage(hurricane_dictionary):
-  """Find the highest damage inducing hurricane and its total cost."""
+# Find the highest damage inducing hurricane and its total cost.
   max_damage_cane = 'Cuba I'
   max_damage = 0
   for cane in hurricane_dictionary:
@@ -151,7 +151,7 @@ max_damage_cane, max_damage = highest_damage(hurricane_dictionary)
 # print(max_damage_cane, max_damage)
 
 
-# 10 yes
+# 10 works -- don't understand the logic
 # Rating Hurricanes by Damage
   
 # categorize hurricanes in new dictionary with damage severity as key
