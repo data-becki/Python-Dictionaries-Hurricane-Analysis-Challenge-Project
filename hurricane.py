@@ -76,7 +76,7 @@ def area_frequency(hurricane_dictionary):
 affected_areas = area_frequency(hurricane_dictionary)
 # print(affected_areas)
 
-# 6 works -- got solution online
+# 6 works -- got solution online 
 # Calculating Maximum Hurricane Count
 def area_most_affected(affected_areas):
   max_value = max(affected_areas.values())
@@ -86,7 +86,8 @@ def area_most_affected(affected_areas):
 most_affected = area_most_affected(affected_areas)
 # print(most_affected)
 
-# 7 works -- what if there are two with the same deadliness?
+# 7 works -- what if there are two with the same deadliness? 
+# also, not what the instructions ask for: need to use hurricane_dictionary, but don't know how to get the items out I need.
 # Calculating the Deadliest Hurricane
 def death_frequency(names, deaths):
   names_deaths = list(zip(names, deaths))
